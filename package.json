@@ -1,0 +1,20 @@
+{
+  "name": "screenbrush-rebuild",
+  "version": "0.1.0",
+  "private": true,
+  "engines": { "node": ">=22.12.0" },
+  "description": "Desktop screen annotation inspired by ScreenBrush",
+  "main": "src/main.cjs",
+  "scripts": {
+    "postinstall": "install-electron",
+    "start": "electron .",
+    "build:windows": "node scripts/build-windows.cjs",
+    "icons": "electron scripts/render-icon.cjs",
+    "test": "node test/drawing.test.cjs",
+    "test:desktop": "electron test/smoke.cjs",
+    "check": "node --check src/main.cjs && node --check src/preload.cjs && node --check src/renderer.js && node --check src/toolbar.js && node --check src/shortcuts.js"
+  },
+  "devDependencies": {
+    "electron": "^45.2.1"
+  }
+}

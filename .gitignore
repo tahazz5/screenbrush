@@ -1,0 +1,10 @@
+node_modules/
+build/
+.tools/
+.agents/
+.aws/
+.codex/
+research/rea-doctor.json
+core
+core.*
+*.log
